@@ -5,23 +5,46 @@ Create a simple time tracking app using react JS and a GraphQL endpoint. The app
 1)	Click a button to start and stop the timer.
 1)	List the details of previously tracked time entries.
 
-### Before you Start
+---
+# Before you Start
 
-1)	Visit www.proworkflow.com and sign up for a free trial using the company name 
-    “DEVTESTyourfirstname”.
+    Visit www.proworkflow.com and sign up for a free trial.  
+     - For 'Company Name'  enter "Dev Test" + [your first name]
+     - e.g. DEVTESTjonathan
+    
+   
+   > ---
+   > ## "DEVTESTjonathan" is referred as 'accountpath' 
+   > ---
+
 1)	Familiarize yourself with how to track time within the current tool.
-1)	Reach out to our support team, explain you are completing the development test and ask them for the API Key of the trial you have just created.
+1)	Reach out to our support team via chat or email, explain you are completing the development test and ask them for the API Key of the trial you have just created.
 
 ### GraphQL Endpoint
-The public graphql endpoint is https://graph.proworkflow.com/ 
+The public graphql endpoint is https://graph.proworkflow.com/[accountpath]
 
--	Add the header below to authenticate
+-	Add the header below to authenticate 
 ```
 { "Authorization":"YOUR-API-KEY"}
 ``` 
--	You can explore or write test queries at https://graph.proworkflow.com/explorer/  
--	add the Authorization in the HTTP Headers section of the explorer Graphql tool
+-	You can explore or write test queries at https://graph.proworkflow.com/[accountpath]/explorer/
+-	add the Authorization in the HTTP Headers section (bottom left) of the explorer Graphql tool
+- you can run queries from queries.gql in this 'explorer' to view the results, or write your own
+- the query below will return all active tasks (no filtering)
+ ```
+{
+    tasks{
+        id 
+        name 
+        timerecords{
+            id 
+            timespent
+        }
+    }
+}  
+```
 
+# Time Tracking Test Tasks
 
 ## Select Task
 1)	The user can search then select a task using a key word search using GET_TASKS graphql query.
@@ -50,7 +73,8 @@ The public graphql endpoint is https://graph.proworkflow.com/
 -	Time tracked (HH:mm)
 -   Tracked by (contact full name)
 
-## Additional Instructions 
+---
+# Additional Instructions 
 - The graphql Query and Mutations are supplied in queries.gql file in this repo
 - You are welcome to make use of any component libraries such as Material UI
 - You are free to make any design or UX decisions which may aid in the usability of this time tracking application
