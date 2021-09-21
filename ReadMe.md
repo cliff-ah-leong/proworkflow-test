@@ -7,7 +7,8 @@ Create a simple time tracking app using react JS and a GraphQL endpoint. The app
 
 ### Before you Start
 
-1)	Visit www.proworkflow.com and sign up for a free trial using the company name “DEVTEST yourfirstname”.
+1)	Visit www.proworkflow.com and sign up for a free trial using the company name 
+    “DEVTESTyourfirstname”.
 1)	Familiarize yourself with how to track time within the current tool.
 1)	Reach out to our support team, explain you are completing the development test and ask them for the API Key of the trial you have just created.
 
@@ -38,22 +39,22 @@ The public graphql endpoint is https://graph.proworkflow.com/
 -	If no notes are added, the app should supply the project name and task name as notes to the mutation.
 
 ## Time Entries List:
--	Below the Start/Stop timer button, a list of previous time records that have been tracked against the task should be displayed using the GET_TIMERECORDS GraphQL query.
+-	Below the Start/Stop timer button, a list of previous time records that have been tracked against the task should be displayed, this data can be found from the GET_TASK query.
 -	This list should be updated once a new time record has been stopped.
 
 ### Timer List Details to Display
+-   Notes
 -	Start date
--	Tracked by – (contact full name)
 -	Start time
 -	Stop time
 -	Time tracked (HH:mm)
--	Notes
+-   Tracked by (contact full name)
 
 ## Additional Instructions 
-- The graphql Query and Mutations are supplied in .gql files in this repo
+- The graphql Query and Mutations are supplied in queries.gql file in this repo
 - You are welcome to make use of any component libraries such as Material UI
 - You are free to make any design or UX decisions which may aid in the usability of this time tracking application
 
-## Additional Tasks (OPTIONAL)
-1	Give user the ability to filter/search for specific tasks by providing a search parameter to FILTER_TASKS query (example input given in task.gql)
-1	Allow user to edit time entry notes in Time Entries list 
+## Additional Tasks (OPTIONAL) - see extended_queries.gql
+1	Give user the ability to filter/search for specific tasks by providing a search parameter to FILTER_TASKS query
+1	Allow user to edit time entry notes in Time Entries list
