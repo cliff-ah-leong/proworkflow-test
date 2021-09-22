@@ -12,6 +12,8 @@ Create a simple time tracking app using react JS and a GraphQL endpoint. The app
      - For 'Company Name'  enter "Dev Test" + [your first name]
      - e.g. DEVTESTjonathan
     
+     Follow this naming convention to ensure you are granted access to GraphQL Enpoint as described below
+    
    
    > ---
    > ## "DEVTESTjonathan" is referred as 'accountpath' 
