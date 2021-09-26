@@ -50,8 +50,7 @@ The public graphql endpoint is https://graph.proworkflow.com/[accountpath]
 # Time Tracking Test Tasks
 
 ## Select Task
-1)	The user can search then select a task using a key word search using GET_TASKS graphql query.
-1)	User selects a task they wish to track time against from the result set.
+1)	Allow the user to select a task they wish to track time against from the GET_TASKS graphql query results.
 1)	The application should display the currently selected task.
 1)	Once a task has been selected, the user should be presented with a “Start Timer Button” and a list of previously recorded time entries. (explained below)
 
@@ -80,8 +79,8 @@ The public graphql endpoint is https://graph.proworkflow.com/[accountpath]
 # Additional Instructions 
 - The graphql Query and Mutations are supplied in queries.gql file in this repo
 - You are welcome to make use of any component libraries such as Material UI
-- You are free to make any design or UX decisions which may aid in the usability of this time tracking application
+- You are free to make any UX decisions which may aid in the usability of this time tracking application
 
 ## Additional Tasks (OPTIONAL) - see extended_queries.gql
-1	Give user the ability to filter/search for specific tasks by providing a search parameter to FILTER_TASKS query
+1	Extend "Select Task" to give the user the ability to filter/search for specific tasks by providing a search parameter to FILTER_TASKS query
 1	Allow user to edit time entry notes in Time Entries list
