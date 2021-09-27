@@ -1,9 +1,9 @@
 # Project Brief
 
 Create a simple time tracking app using react JS and a GraphQL endpoint. The application will present the user with the ability to 
-1)	Select a task (select box)
-1)	Click a button to start and stop the timer.
-1)	List the details of previously tracked time entries.
+- Select a task (select box)
+- Click a button to start and stop the timer.
+- List the details of previously tracked time entries.
 
 ---
 # Before you Start
@@ -16,21 +16,21 @@ Create a simple time tracking app using react JS and a GraphQL endpoint. The app
     
    
    > ---
-   > ## "DEVTESTjonathan" is referred as 'accountpath' 
+   > ## "DEVTESTjonathan" is referred as your 'workspace' 
    > ---
 
-1)	Familiarize yourself with how to track time within the current tool.
-1)	Reach out to our support team via live chat or support@proworkflow.com
-1) Explain you are completing the development test and ask them to provide the API Key of the trial you have just created.
+- Familiarize yourself with how to track time within the current tool.
+- Reach out to our support team via live chat or support@proworkflow.com
+- Explain you are completing the development test and ask them to provide the API Key of the trial you have just created.
 
 ### GraphQL Endpoint
-The public graphql endpoint is https://graph.proworkflow.com/[accountpath]
+The public graphql endpoint is https://graph.proworkflow.com/[workspace]
 
 -	Add the header below to authenticate 
 ```
 { "Authorization":"YOUR-API-KEY"}
 ``` 
--	You can explore or write test queries at https://graph.proworkflow.com/[accountpath]/explorer/
+-	You can explore or write test queries at https://graph.proworkflow.com/[workspace]/explorer/
 -	add the Authorization in the HTTP Headers section (bottom left) of the explorer Graphql tool
 - you can run queries from queries.gql in this 'explorer' to view the results, or write your own
 - the query below will return all active tasks (no filtering)
@@ -50,9 +50,9 @@ The public graphql endpoint is https://graph.proworkflow.com/[accountpath]
 # Time Tracking Test Tasks
 
 ## Select Task
-1)	Allow the user to select a task they wish to track time against from the GET_TASKS graphql query results.
-1)	The application should display the currently selected task.
-1)	Once a task has been selected, the user should be presented with a “Start Timer Button” and a list of previously recorded time entries. (explained below)
+- Allow the user to select a task they wish to track time against from the GET_TASKS graphql query results.
+- The application should display the currently selected task.
+- Once a task has been selected, the user should be presented with a “Start Timer Button” and a list of previously recorded time entries. (explained below)
 
 ## Start Timer (Button)
 -	The user should be presented with a button to “Start Timer”, this will fire the START_TIMERECORD mutation.  
@@ -82,5 +82,5 @@ The public graphql endpoint is https://graph.proworkflow.com/[accountpath]
 - You are free to make any UX decisions which may aid in the usability of this time tracking application
 
 ## Additional Tasks (OPTIONAL) - see extended_queries.gql
-1	Extend "Select Task" to give the user the ability to filter/search for specific tasks by providing a search parameter to FILTER_TASKS query
-1	Allow user to edit time entry notes in Time Entries list
+-	Extend "Select Task" to give the user the ability to filter/search for specific tasks by providing a search parameter to FILTER_TASKS query
+-	Allow user to edit time entry notes in Time Entries list
