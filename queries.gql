@@ -49,7 +49,8 @@ mutation START_TIMERECORD($input: StartTimerecordInput) {
 example mutation input
 {
   "input": {
-    "taskid": 123
+    "taskid": 123,
+    "notes": "Example Notes"
   }
 }
 """

@@ -20,8 +20,10 @@ Create a simple time tracking app using react JS and a GraphQL endpoint. The app
    > ## "DEVTESTjonathan" is referred as your 'workspace' 
    > ---
 
-- Familiarize yourself with how to track time within the current tool.
-- Reach out to our support team via live chat or support@proworkflow.com
+
+
+## Access to GraphQL API Key
+- Reach out to our support team via live chat on https://www.proworkflow.com or email at support@proworkflow.com
 - Explain you are completing the development test and ask them to provide the API Key of the trial you have just created.
 
 ### GraphQL Endpoint
