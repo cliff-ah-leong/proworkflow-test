@@ -57,12 +57,12 @@ The public graphql endpoint is https://graph.proworkflow.com/[workspace]
 
 ## Start Timer (Button)
 -	The user should be presented with a button to “Start Timer”, this will fire the START_TIMERECORD mutation.  
--	A timer should be shown showing how long the current timer has been running (format HH:mm)
+-	There should be a display to show how long the current timer has been running (format HH:mm)
 
 ## Stop Timer (Button)
 -	The stop timer button will fire the STOP_TIMERECORD mutation. 
--	An option to add ‘notes’ should be given when the user clicks ‘stop timer’ button
--	If no notes are added, the app should supply the project name and task name as notes to the mutation.
+-	An option to add ‘notes’ should be given when the user clicks ‘stop timer’ button and can be supplied to the STOP_TIMERECORD mutation
+-	If no notes are added, the app should supply the task name and start date as notes to the mutation.
 
 ## Time Entries Display:
 -	Below the Start/Stop timer button, a display of previous time records that have been tracked against the task should be shown, this data can be found from the GET_TASK query.
@@ -79,10 +79,9 @@ The public graphql endpoint is https://graph.proworkflow.com/[workspace]
 ---
 # Additional Instructions 
 - The graphql Query and Mutations are supplied in queries.gql file in this repo
+- Please commit regularly with commit messages so we can understand your progress as the app develops
 - You are welcome to make use of any component libraries such as Material UI
 - You are free to make any UX decisions which may aid in the usability of this time tracking application. 
 - Code structure, Component Libraries, UX and Design decisions are likely to be discussion points during the interview so prepare for discussions about these choices.
+  
 
-## Additional Tasks (OPTIONAL) - see extended_queries.gql
--	Extend "Select Task" to give the user the ability to filter/search for specific tasks by providing a search parameter to FILTER_TASKS query
--	Allow user to edit time entry notes in Time Entries list

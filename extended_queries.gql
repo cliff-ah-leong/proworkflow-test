@@ -34,8 +34,8 @@ Mutation for Additional Task 2:
 
 """
 
-mutation UPDATE_TIMERECORD_NOTES($input: UpdateTimerecordNotesInput) {
-  updateTimerecordNotes(input: $input) {
+mutation UPDATE_TIMERECORD($input: UpdateTimerecordInput) {
+  updateTimerecord(input: $input) {
     ...TIMERECORD_INFO
   }
 }
@@ -44,6 +44,7 @@ example mutation input
 {
   "input": {
     "id": 456,
+    "timespent": 30,
     "notes":"UPDATED NOTES"
   }
 }
