@@ -1,12 +1,43 @@
-# Project Brief
+# Project Brief Overview
 
-Create a simple time tracking app using react JS and a GraphQL endpoint. The application will present the user with the ability to
+Create a simple time tracking application using react JS and ProWorkflow's GraphQL API endpoint. The application will present the user with the ability to
 
 - 1) Select a task (select box)
 
 - 2) Click a button to start and stop the timer.
 
 - 3) Display the details of time record entries against a task.
+
+
+# Project Brief Detailed Instructions
+
+## Select Task
+- Allow the user to select a task they wish to track time against from the GET_TASKS graphql query results.
+- Once a task has been selected, the user should be presented with a “Start Timer Button” and display any "Time Record Entries".
+
+## Start Timer (Button)
+-	The user should be presented with a button to “Start Timer”, this will fire the START_TIMERECORD mutation.  
+- Once a timer has been started, the User should be presented with a Stop Timer button and hide the Start Timer Button
+- The user should not be able to select a different Task when a timer is started/running.
+
+## Stop Timer (Button)
+-	The stop timer button will fire the STOP_TIMERECORD mutation. 
+-	An option to add ‘notes’ should be given when the user clicks ‘stop timer’ button and can be supplied to the STOP_TIMERECORD mutation
+-	If no notes are added, the app should supply the task name and start date as notes to the mutation.
+
+## Time Record Entries:
+-	Below the Select Task and Start/Stop timer buttons, a tabular display of time records entries that have been tracked against the task should be shown.
+-   This data can be found in the GET_TASKS query.
+-	The display should be updated once a new time record has been stopped with newest time entries at the top.
+- Stop time and Time Tracked only apply for stopped timers (running:false)
+
+### Timer Entry Details to Display
+-   Notes
+-	Start date
+-	Start time
+-	Stop time 
+-	Time tracked (HH:mm) 
+-   Tracked by (contact full name)
 
 ---
 # Before you Start
@@ -54,35 +85,6 @@ The public graphql endpoint is https://graph.proworkflow.com/[workspace]
 }  
 ```
 
-# Time Tracking Test Tasks
-
-## Select Task
-- Allow the user to select a task they wish to track time against from the GET_TASKS graphql query results.
-- The application should display the currently selected task.
-- Once a task has been selected, the user should be presented with a “Start Timer Button” and a list of previously recorded time entries. (explained below)
-
-## Start Timer (Button)
--	The user should be presented with a button to “Start Timer”, this will fire the START_TIMERECORD mutation.  
-- Once a timer has been started, the User should be presented with a Stop Timer button and hide the Start Timer Button
-
-## Stop Timer (Button)
--	The stop timer button will fire the STOP_TIMERECORD mutation. 
--	An option to add ‘notes’ should be given when the user clicks ‘stop timer’ button and can be supplied to the STOP_TIMERECORD mutation
--	If no notes are added, the app should supply the task name and start date as notes to the mutation.
-
-## Time Entries Display:
--	Below the Select Task and Start/Stop timer buttons, a tabular display of time records entries that have been tracked against the task should be shown.
--   This data can be found from the GET_TASKS query.
--	This display should be updated once a new time record has been stopped with newest time entries at the top.
-
-### Timer Entry Details to Display
--   Notes
--	Start date
--	Start time
--	Stop time
--	Time tracked (HH:mm)
--   Tracked by (contact full name)
-
 ---
 # Additional Instructions 
 - Please commit regularly with commit messages so we can understand your progress as the app develops
@@ -90,6 +92,6 @@ The public graphql endpoint is https://graph.proworkflow.com/[workspace]
 - You are free to make any UX decisions which may aid in the usability of this time tracking application. 
 - The graphql Query and Mutations are supplied in queries.gql file in this repo
 - Code structure, Component Libraries, UX and Design decisions are likely to be discussion points during the interview so prepare for discussions about these choices.
-- The system does not allow two timers to run concurrently, therefore the system will automatically stop any currently running timers when a new START_TIMERECORD mutation occurs. It may be benefitial for the application to prevent a user switching tasks while a timer is running.
+
   
 
