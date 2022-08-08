@@ -11,13 +11,13 @@ Create a simple time tracking app using react JS and a GraphQL endpoint. The app
 
     Visit www.proworkflow.com and sign up for a free trial.  
      - For 'Company Name'  enter "Dev Test" + [your first name]
-     - e.g. DEVTESTjonathan
+     - e.g. DEVTESTjonathan (https://app.proworkflow.com/DEVTESTjonathan/)
+     - 
     
-     Please ensure you follow this naming convention to ensure you are granted access to GraphQL Enpoint as described below
-    
-   
+    IMPORTANT: Please ensure you follow 'DEVTEST' naming convention to ensure you are granted access to GraphQL Enpoint and identified as a developer applicant.
+       
    > ---
-   > ## "DEVTESTjonathan" is referred as your 'workspace' 
+   > ## "DEVTESTjonathan" is referred below as 'workspace' 
    > ---
 
 
@@ -26,17 +26,19 @@ Create a simple time tracking app using react JS and a GraphQL endpoint. The app
 - Reach out to our support team via live chat on https://www.proworkflow.com or email at support@proworkflow.com
 - Explain you are completing the development test and ask them to provide the API Key of the trial you have just created.
 
-### GraphQL Endpoint
+### GraphQL Endpoint for applicaiton development
 The public graphql endpoint is https://graph.proworkflow.com/[workspace]
 
--	Add the header below to authenticate 
+-	Add the header below to authenticate your post requests
 ```
 { "Authorization":"YOUR-API-KEY"}
 ``` 
--	You can explore or write test queries at https://graph.proworkflow.com/[workspace]/explorer/
--	add the Authorization in the HTTP Headers section (bottom left) of the explorer Graphql tool
-- you can run queries from queries.gql in this 'explorer' to view the results, or write your own
-- the query below will return all active tasks (no filtering)
+
+### GraphQL Testing/Debuging Environment
+-	Within your free trial there is a GraphQL playground environment. You can visually explore the schema or write test queries at https://app.proworkflow.com/[workspace]/explorer/  (EG: https://app.proworkflow.com/DEVTESTjonathan/explorer/)
+
+- you can copy/paste queries from queries.gql in this 'explorer' to view the results, or write your own to learn GraphQL syntax
+- the query below will return all active tasks (no filtering) with any timerecord entries nested inside
  ```
 {
     tasks{
@@ -59,7 +61,7 @@ The public graphql endpoint is https://graph.proworkflow.com/[workspace]
 
 ## Start Timer (Button)
 -	The user should be presented with a button to “Start Timer”, this will fire the START_TIMERECORD mutation.  
--	There should be a display to show how long the current timer has been running (format HH:mm)
+- Once a timer has been started, the User should be presented with a Stop Timer button and hide the Start Timer Button
 
 ## Stop Timer (Button)
 -	The stop timer button will fire the STOP_TIMERECORD mutation. 
@@ -67,8 +69,9 @@ The public graphql endpoint is https://graph.proworkflow.com/[workspace]
 -	If no notes are added, the app should supply the task name and start date as notes to the mutation.
 
 ## Time Entries Display:
--	Below the Start/Stop timer button, a display of previous time records that have been tracked against the task should be shown, this data can be found from the GET_TASK query.
--	This should be updated once a new time record has been stopped with newest time entries at the top.
+-	Below the Select Task and Start/Stop timer buttons, a tabular display of time records entries that have been tracked against the task should be shown.
+-   This data can be found from the GET_TASKS query.
+-	This display should be updated once a new time record has been stopped with newest time entries at the top.
 
 ### Timer Entry Details to Display
 -   Notes
@@ -80,10 +83,11 @@ The public graphql endpoint is https://graph.proworkflow.com/[workspace]
 
 ---
 # Additional Instructions 
-- The graphql Query and Mutations are supplied in queries.gql file in this repo
 - Please commit regularly with commit messages so we can understand your progress as the app develops
 - You are welcome to make use of any component libraries such as Material UI
 - You are free to make any UX decisions which may aid in the usability of this time tracking application. 
+- The graphql Query and Mutations are supplied in queries.gql file in this repo
 - Code structure, Component Libraries, UX and Design decisions are likely to be discussion points during the interview so prepare for discussions about these choices.
+- The system does not allow two timers to run concurrently, therefore the system will automatically stop any currently running timers when a new START_TIMERECORD mutation occurs. It may be benefitial for the application to prevent a user switching tasks while a timer is running.
   
 

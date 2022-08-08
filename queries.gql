@@ -27,12 +27,13 @@ query GET_TASKS {
   ) {
     id
     name
-    timerecords {
+    timerecords(input:{running:{IN:[true,false]}}) {
       ...TIMERECORD_INFO
     }
     taskTotalTimespent: timespent
   }
 }
+
 
 mutation STOP_TIMERECORD($input: StartTimerecordInput) {
   stopTimerecord(input: $input) {
