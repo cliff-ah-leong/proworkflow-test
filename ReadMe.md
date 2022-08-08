@@ -1,10 +1,12 @@
 # Project Brief
 
-Create a simple time tracking app using react JS and a GraphQL endpoint. The application will present the user with the ability to,
+Create a simple time tracking app using react JS and a GraphQL endpoint. The application will present the user with the ability to
 
-1) Select a task (select box)
-2) Click a button to start and stop the timer.
-3) Display the details of tracked time entries against a task.
+- 1) Select a task (select box)
+
+- 2) Click a button to start and stop the timer.
+
+- 3) Display the details of time record entries against a task.
 
 ---
 # Before you Start
