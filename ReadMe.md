@@ -34,10 +34,9 @@ Create a simple time tracking application using react JS and ProWorkflow's Graph
 ### Timer Entry Details to Display
 -   Notes
 -	Start date
--	Start time
--	Stop time 
--	Time tracked (HH:mm) 
 -   Tracked by (contact full name)
+-	Time tracked (HH:mm for stopped timers, 'running' for active timers) 
+
 
 ---
 # Before you Start
@@ -93,5 +92,7 @@ The public graphql endpoint is https://graph.proworkflow.com/[workspace]
 - The graphql Query and Mutations are supplied in queries.gql file in this repo
 - Code structure, Component Libraries, UX and Design decisions are likely to be discussion points during the interview so prepare for discussions about these choices.
 
+Simple Wireframe
+![alt text](TimeTrackerSimpleWireframe.png)
   
 
