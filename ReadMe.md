@@ -88,9 +88,11 @@ The public graphql endpoint is https://graph.proworkflow.com/[workspace]
 # Additional Instructions 
 - Please commit regularly with commit messages so we can understand your progress as the app develops
 - You are welcome to make use of any component libraries such as Material UI
-- You are free to make any UX decisions which may aid in the usability of this time tracking application. 
+- A simple wireframe is found below to be used as a guide.
+- You are free to make any changes or UX decisions to the wireframe if you wish which may aid in the usability of this time tracking application. 
 - The graphql Query and Mutations are supplied in queries.gql file in this repo
 - Code structure, Component Libraries, UX and Design decisions are likely to be discussion points during the interview so prepare for discussions about these choices.
+
 
 Simple Wireframe
 ![alt text](TimeTrackerSimpleWireframe.png)
